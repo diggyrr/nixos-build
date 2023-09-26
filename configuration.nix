@@ -29,10 +29,10 @@ in
   # Software and Package Configurations
   programs.zsh.enable = true; # Enable ZSH for the system
   environment.systemPackages = with pkgs; [ # List of packages to be globally installed
-    alacritty neovim sway firefox-wayland wget docker wob libfido2 gh swappy swaylock-effects
+    alacritty neovim sway google-chrome wget docker wob libfido2 gh swappy swaylock-effects
     nodejs python3 python3Packages.pip shellcheck wdisplays git waybar blueman brightnessctl
     home-manager pavucontrol alsa-utils grim bluez dconf tidal-hifi vscode gnome.gnome-boxes 
-    shfmt mako slurp wl-clipboard unzip statix nixpkgs-fmt neofetch rofi
+    shfmt mako slurp wl-clipboard unzip statix nixpkgs-fmt neofetch rofi insomnia
   ];
   virtualisation.docker.enable = true; # Enable Docker
 
@@ -55,7 +55,7 @@ in
   networking.networkmanager.enable = true; # Enable NetworkManager for network management
   hardware.bluetooth = {
     enable = true;
-    package = pkgs.bluezFull; # Use the full Bluez package for Bluetooth support
+    package = pkgs.bluez; # Use the full Bluez package for Bluetooth support
     powerOnBoot = true; # Power on Bluetooth devices at boot
     settings = {
       General = {
