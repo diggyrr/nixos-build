@@ -63,6 +63,7 @@
 
    # Hotkey for screenshot
    bindsym $mod+p exec grim -g "$(slurp)" - | swappy -f -
+   bindsym $mod+Shift+p exec grim - | swappy -f -
 
    # Lock screen on lid close
    bindswitch --locked lid:on exec swaylock-effects --clock --screenshots --effect-pixelate 5
