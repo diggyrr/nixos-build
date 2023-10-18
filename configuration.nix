@@ -32,7 +32,8 @@ in
     alacritty neovim sway google-chrome wget docker wob libfido2 gh swappy swaylock-effects
     nodejs python3 python3Packages.pip shellcheck wdisplays git waybar blueman brightnessctl
     home-manager pavucontrol alsa-utils grim bluez dconf tidal-hifi vscode gnome.gnome-boxes 
-    shfmt mako slurp wl-clipboard unzip statix nixpkgs-fmt neofetch rofi insomnia postgresql
+    shfmt mako slurp wl-clipboard unzip statix nixpkgs-fmt neofetch rofi insomnia postgresql 
+    zoom-us qemu_kvm gcc.cc.lib 
   ];
   virtualisation.docker.enable = true; # Enable Docker
 
@@ -90,4 +91,6 @@ in
     enable = true; # Enable xdg desktop integration
     extraPortals = with pkgs; [ xdg-desktop-portal-wlr xdg-desktop-portal-gtk ];
   };
+  # Virtualization Configurations
+    virtualisation.libvirtd.enable = true;
 }
